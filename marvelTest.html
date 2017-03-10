@@ -8,14 +8,20 @@
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 
 <script type="text/javascript">
-	var queryURL = "https://gateway.marvel.com:443/v1/public/characters?name=wolverine&apikey=2da61ccae36a2d935be6acf3e8901868"
+	var settings = {
+ "async": true,
+ "crossDomain": true,
+ "url": "https://gateway.marvel.com:443/v1/public/characters?name=wolverine&apikey=2da61ccae36a2d935be6acf3e8901868",
+ "method": "GET",
+ "headers": {
+   "cache-control": "no-cache",
+   "postman-token": "8e001bcb-bb37-3dbf-48e7-ba51519fc4bc"
+ }
+}
 
-	$.ajax({
-		url: queryURL,
-		method: 'GET',
-	}).done(function(response) {
-		console.log(response);
-	});
+$.ajax(settings).done(function (response) {
+ console.log(response);
+});
 </script>
 	
 </body>
