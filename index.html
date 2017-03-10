@@ -16,8 +16,8 @@
 
 	console.log("hey");       
 
-    var ts = new Date().getTime();
-    var hash = md5(ts + PRIV_KEY + PUBLIC_KEY.toString());
+    var ts = 1;
+    var hash = "301cc66ea78b36c904bef4d33fb1bd02";
 
     var marvelAPI = "https://gateway.marvel.com/v1/public/comics?ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
     $.ajax  ({
