@@ -13,20 +13,22 @@
 <script type="text/javascript">
 	var PRIV_KEY = "feb2aceadb1a26296c6979ccc191a9fc7db1498f";     
 	var PUBLIC_KEY = "2da61ccae36a2d935be6acf3e8901868";
+  var name = "iron%20man";
 
 	console.log("hey");       
 
     var ts = 1;
     var hash = "301cc66ea78b36c904bef4d33fb1bd02";
 
-    var marvelAPI = "https://gateway.marvel.com:443/v1/public/characters?name=iron%20man&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
+    var marvelAPI = "https://gateway.marvel.com:443/v1/public/characters?name="+ name +"&ts=" + ts + "&apikey=" + PUBLIC_KEY + "&hash=" + hash;
     $.ajax  ({
        dataType: "json",
        url: marvelAPI
     }).done(function(data) {
-             // sort of a long dump you will need to sort through
+             
         console.log(data);
         console.log("done");
+
     });
 </script>
 	
