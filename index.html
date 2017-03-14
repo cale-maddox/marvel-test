@@ -24,9 +24,12 @@
     $.ajax  ({
        dataType: "json",
        url: marvelAPI
-    }).done(function(data) {
+    }).done(function(response) {
              
-        console.log(data);
+        console.log(response.data.results[0].description);
+        console.log(response.data.results[0].name);
+        console.log(response.data.results[0].urls[0].url);
+        console.log(response.data.results[0].urls[1].url);
         console.log("done");
 
     });
